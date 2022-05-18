@@ -1,0 +1,38 @@
+.Navbar {
+    background-color: #20232a;
+    color: #FFF;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.Navbar-container {
+    display: flex;
+    /* margin: auto; */
+}
+.Navbar-container-nav {
+    margin: 20px auto 20px auto;
+    align-items: center;
+}
+a {
+    color: #fff;
+    margin: 20px;
+    text-decoration: none;
+}
+a:hover {
+    color: #61dafb;
+}
+.Navbar-searchbar-container {
+    margin: auto;
+}
+.Navbar-searchbar {
+    background-color: #20232a;
+    border: 0;
+    border-color: #20232a;
+    border-radius: 5px;
+    border-style: none;
+    outline: none;
+}
+.Navbar-searchbar:focus {
+    background-color: #373940;
+}
