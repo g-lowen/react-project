@@ -1,0 +1,19 @@
+/* .Player {
+  color: black;
+} */
+.container {
+    /* text-align: center; */
+}
+.child {
+  /* margin: 0 auto; */
+  text-align: center;
+}
+table{
+  border: 5px solid green;
+}
+th {
+  border: 5px solid red;
+}
+td {
+  border: 5px solid blue;
+}

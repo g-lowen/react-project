@@ -31,6 +31,8 @@ a:hover {
     border-color: #20232a;
     border-radius: 5px;
     border-style: none;
+    color: white;
+    padding: 10px;
     outline: none;
 }
 .Navbar-searchbar:focus {
