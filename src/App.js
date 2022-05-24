@@ -1,20 +1,25 @@
-import './App.css'
-import Navbar from './UI/Navbar'
-import Footer from './UI/Footer'
-import Player from './Views/Player'
-import AddPlayer from './Component/AddPlayer'
+import "./App.css";
+import Navbar from "./UI/Navbar";
+import Footer from "./UI/Footer";
+import { Routes, Route } from "react-router-dom";
+import Contact from "../src/Views/Contact";
+import Home from "../src/Views/Home";
+import Rules from "../src/Views/Rules";
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <AddPlayer />
-      <header className="App-header">
-        <Player />
-      </header>
+      <main className="App-main">
+        <Routes>
+          <Route element={<Contact />} path="/contact" />
+          <Route element={<Home />} path="/" />
+          <Route element={<Rules />} path="/rules" />
+        </Routes>
+      </main>
       <Footer />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

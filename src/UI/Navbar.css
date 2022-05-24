@@ -14,12 +14,12 @@
     margin: 20px auto 20px auto;
     align-items: center;
 }
-a {
+.Test {
     color: #fff;
     margin: 20px;
     text-decoration: none;
 }
-a:hover {
+.Test:hover {
     color: #61dafb;
 }
 .Navbar-searchbar-container {
@@ -37,4 +37,13 @@ a:hover {
 }
 .Navbar-searchbar:focus {
     background-color: #373940;
+}
+
+li {
+    list-style: none;
+
+}
+
+ul {
+    margin: 0;
 }

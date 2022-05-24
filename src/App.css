@@ -1,8 +1,4 @@
-.App {
-  /* text-align: center; */
-}
-
-.App-header {
+.App-main {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -15,16 +11,10 @@
   ),
   url(./img/dice.jpg);
 
-  align-items: center;
   background-color: #282c34;
-  /* color: white; */
   font-weight: bold;
-  display: flex;
-  flex-direction: column;
   font-size: calc(10px + 2vmin);
-  justify-content: center;
   min-height: 100vh;
-  /* opacity: 50%; */
 }
 
 .App-link {

@@ -1,8 +1,9 @@
 Todo labb1:
     - En toggle för dubbla poäng
     - Möjlighet att välja färg?
-    - Miniräknare?
+    - Miniräknare? API? Fetch? Fesk?
     - Enhörning?
+    - Favicon + logo
 
 
 För G:
