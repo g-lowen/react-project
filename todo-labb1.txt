@@ -1,20 +1,18 @@
 Todo labb1:
-    - En toggle för dubbla poäng
     - Möjlighet att välja färg?
     - Miniräknare? API? Fetch? Fesk?
-    - Enhörning?
     - Favicon + logo
 
 
 För G:
-    - Skapa en Single Page Application-webbapplikation, bestående av minst två webbsidor, med create-react-app/liknande och React Router/liknande
-    - Låt webbapplikationen kommunicera med minst en backend-tjänst med useEffect, samt fetch eller liknande (prova gärna att använda Axios istället för fetch)
+    ✓ Skapa en Single Page Application-webbapplikation, bestående av minst två webbsidor, med create-react-app/liknande och React Router/liknande
+    ✓ Låt webbapplikationen kommunicera med minst en backend-tjänst med useEffect, samt fetch eller liknande (prova gärna att använda Axios istället för fetch)
     - “Injicera”, och ta emot, minst en prop
-    - Hantera minst ett event
-    - Använd useState minst en gång
-    - Använd && likt hur v-if skulle ha använts i Vue.js, minst en gång
-    - Använd conditional-operatorn likt hur v-if och v-else skulle ha använts i Vue.js, minst en gång
-    - Använd map likt hur v-for skulle ha använts i Vue.js, minst en gång
+    ✓ Hantera minst ett event
+    ✓ Använd useState minst en gång
+    ✓ Använd && likt hur v-if skulle ha använts i Vue.js, minst en gång
+    ✓ Använd conditional-operatorn likt hur v-if och v-else skulle ha använts i Vue.js, minst en gång
+    ✓ Använd map likt hur v-for skulle ha använts i Vue.js, minst en gång
     - Presentera webbapplikationen och dess kod under 5-15 minuter (exklusive frågor) på plats och på svenska den 2/6 (Presentationen behöver inte innehålla slides)
 
 För VG så ska, utöver att kraven för G är uppfyllda, följande vara uppfyllt:
@@ -22,6 +20,6 @@ För VG så ska, utöver att kraven för G är uppfyllda, följande vara uppfyll
     - Använd Formik eller liknande för formulärhantering, inklusive validering (Formuläret kan vara simpelt, och kan till exempel innehålla endast ett textfält och en submit-knapp)
     - Använd styled-components eller liknande (en CSS-in-JS-lösning) för stilsättning (Det räcker att stilsätta ett element)
     - Lämna in helt konsistent formaterad kod (Förslagsvis kod formaterad automatiskt via Format On Save och Prettier)
-    - Uppgiften ska göras individuellt.
 
+Uppgiften ska göras individuellt.
 Lämna in koden som ett filarkiv (till exempel en Zip-fil) här på ITHS Distans. node_modules-mappen ska inte ingå i filarkivet som lämnas in.

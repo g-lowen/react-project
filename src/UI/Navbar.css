@@ -10,7 +10,7 @@
     display: flex;
     /* margin: auto; */
 }
-.Navbar-container-nav {
+.Navbar-container-item {
     margin: 20px auto 20px auto;
     align-items: center;
 }
@@ -27,11 +27,11 @@
 }
 .Navbar-searchbar {
     background-color: #20232a;
-    border: 0;
-    border-color: #20232a;
+    border: none;
     border-radius: 5px;
     border-style: none;
     color: white;
+    display: none;
     padding: 10px;
     outline: none;
 }
@@ -47,3 +47,9 @@ li {
 ul {
     margin: 0;
 }
+
+@media screen and (min-width: 980px) {
+    .Navbar-searchbar {
+        display: block;
+    }
+  }

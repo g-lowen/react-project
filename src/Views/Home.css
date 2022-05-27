@@ -1,21 +1,19 @@
 /* .Player {
   color: black;
 } */
-.container {
-    /* text-align: center; */
-}
-.child {
-  /* margin: 0 auto;
-  text-align: center; */
-}
+
 table{
-  border: 5px solid green;
+  /* border: 5px solid green; */
+  max-width: 50%;
+  margin:  20px auto  20px auto;
 }
 th {
-  border: 5px solid red;
+  /* border: 5px solid red; */
+  /* max-width: 50%; */
 }
 td {
-  border: 5px solid blue;
+  /* border: 5px solid blue;
+  max-width: 50%; */
 }
 
 .addPlayer {
@@ -23,7 +21,90 @@ td {
   color: #FFF;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 10px;
   text-align: center;
+}
+.addPlayer-container {
+  display: flex;
+}
+.addPlayer-container-btn {
+  background-color: #61dafb;
+  border: none;
+  border-radius: 5px;
+  border-style: none;
+  color: #000;
+  margin-left: auto;
+  padding: 10px 15px;
+}
+.addPlayer-container-btn:hover {
+  background-color: #fff
+}
+.addPlayer-container-btn:active {
+  background-color: #fff;
+  transform: translateY(1px);
+}
+.addPlayer-container-input {
+  background-color: #282c34;
+  border: 0;
+  border-color: #282c34;
+  border-radius: 5px;
+  border-style: none;
+  color: white;
+  margin-right: auto;
+  padding: 10px;
+  outline: none;
+}
+.addPlayer-container-input {
+  background-color: #282c34;
+  border: 0;
+  border-color: #282c34;
+  border-radius: 5px;
+  border-style: none;
+  color: white;
+  margin-right: auto;
+  padding: 10px;
+  outline: none;
+}
+.addPlayer-container-input:focus {
+  background-color: #373940;
+}
+.Home-player-container {
+  /* align-items: center; */
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr;
+}
+
+td {
+  /* padding: 10px; */
+}
+.test {
+  padding: 10px;
+}
+.test-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  max-width: 50%;
+}
+table {
+  /* width: 250px; */
+}
+.table-icon {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+}
+
+@media screen and (min-width: 980px) {
+  .Home-player-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .Home-player-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
