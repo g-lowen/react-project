@@ -1,11 +1,9 @@
-/* .Player {
-  color: black;
-} */
-
 table{
   /* border: 5px solid green; */
   max-width: 50%;
-  margin:  20px auto  20px auto;
+  margin:  50px auto 10px auto;
+  background-color: rgba(0,0,0,0.1);
+  border-radius: 10px;
 }
 th {
   /* border: 5px solid red; */
@@ -74,27 +72,23 @@ td {
   justify-content: center;
   grid-template-columns: 1fr;
 }
-
-td {
-  /* padding: 10px; */
-}
-.test {
+.row {
   padding: 10px;
 }
-.test-container {
+.row-container {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: auto;
   max-width: 50%;
 }
-table {
-  /* width: 250px; */
-}
 .table-icon {
   border-radius: 50%;
   height: 100px;
   width: 100px;
+}
+.welcome-heading {
+  text-align: center;
 }
 
 @media screen and (min-width: 980px) {

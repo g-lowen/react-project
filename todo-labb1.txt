@@ -18,8 +18,12 @@ För G:
 För VG så ska, utöver att kraven för G är uppfyllda, följande vara uppfyllt:
     - Använd useContext eller liknande för tillståndshantering (Minst ett värde)
     - Använd Formik eller liknande för formulärhantering, inklusive validering (Formuläret kan vara simpelt, och kan till exempel innehålla endast ett textfält och en submit-knapp)
-    - Använd styled-components eller liknande (en CSS-in-JS-lösning) för stilsättning (Det räcker att stilsätta ett element)
+    ✓ Använd styled-components eller liknande (en CSS-in-JS-lösning) för stilsättning (Det räcker att stilsätta ett element)
     - Lämna in helt konsistent formaterad kod (Förslagsvis kod formaterad automatiskt via Format On Save och Prettier)
 
 Uppgiften ska göras individuellt.
 Lämna in koden som ett filarkiv (till exempel en Zip-fil) här på ITHS Distans. node_modules-mappen ska inte ingå i filarkivet som lämnas in.
+
+
+Frågor:
+    - 
