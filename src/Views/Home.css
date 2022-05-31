@@ -13,7 +13,12 @@ td {
   /* border: 5px solid blue;
   max-width: 50%; */
 }
-
+thead {
+    margin-right: 10px;
+}
+tbody {
+  margin-right: 10px;
+}
 .addPlayer {
   background-color: #282c34;
   color: #FFF;
@@ -74,6 +79,7 @@ td {
 }
 .row {
   padding: 10px;
+  margin-right: 20px;
 }
 .row-container {
   display: flex;

@@ -1,29 +1,29 @@
-import "./Home.css";
-import axios from "axios";
-import { Formik } from "formik";
-import React, { useState, useEffect } from "react";
-import styled from "styled-components";
+import './Home.css'
+import axios from 'axios'
+import { Field, ErrorMessage, Form, Formik } from 'formik'
+import React, { useState, useEffect } from 'react'
+import styled from 'styled-components'
 
 function Home() {
-  const [AddPlayer, setAddPlayer] = useState("");
-  const [PlayerName, setPlayerName] = useState("");
-  const [PlayerTables, setPlayerTables] = useState([]);
-  const [value, setValue] = useState(null);
-  const [total, setTotal] = useState(null);
-  const [char, setChar] = useState(null);
+  const [AddPlayer, setAddPlayer] = useState('')
+  const [PlayerName, setPlayerName] = useState('')
+  const [PlayerTables, setPlayerTables] = useState([])
+  const [value, setValue] = useState(null)
+  const [total, setTotal] = useState(null)
+  const [char, setChar] = useState(null)
   const H1 = styled.h1`
     text-align: center;
-  `;
-  let sum = [];
+  `
+  let sum = []
 
-  const TenRows = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  const TenRows = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
   const PlayerTable = (
     <table>
       <thead>
         <tr>
           <th>
             {char === null ? (
-              "Icon"
+              'Icon'
             ) : (
               <img className="table-icon" src={char.image} alt="Character" />
             )}
@@ -54,45 +54,45 @@ function Home() {
         </tr>
       </tfoot>
     </table>
-  );
+  )
   // let PlayerTables = [];
-  // PlayerTables.push(PlayerTable);
+  // PlayerTables.push(PlayerTable)
   function handleChange(event) {
-    console.log(event.target.value);
-    console.log(PlayerTables.length);
-    console.log(PlayerTables);
-    setAddPlayer(event.target.value);
+    console.log(event.target.value)
+    console.log(PlayerTables.length)
+    console.log(PlayerTables)
+    setAddPlayer(event.target.value)
   }
-  console.log(PlayerTables.length);
-  console.log(PlayerTables);
+  console.log(PlayerTables.length)
+  console.log(PlayerTables)
   function handleSubmit(event) {
-    console.log(AddPlayer);
-    setPlayerName(AddPlayer);
-    PlayerTables.push(PlayerTable);
+    console.log(AddPlayer)
+    setPlayerName(AddPlayer)
+    PlayerTables.push(PlayerTable)
     // setPlayerTables(PlayerTable);
     // console.log(totallyValue);
     // setTotal(Number(totallyValue));
     // fetchData();
     // console.log(total);
-    event.preventDefault();
+    event.preventDefault()
   }
   function handleValue(event) {
-    let obj = JSON.parse(JSON.stringify(event.target.value));
-    sum.push(obj);
-    sum = [...sum];
-    console.log(sum);
-    totallyValue();
+    let obj = JSON.parse(JSON.stringify(event.target.value))
+    sum.push(obj)
+    sum = [...sum]
+    console.log(sum)
+    totallyValue()
     // setValue(totallyValue)
     // console.log(obj)
     // console.log(sum)
   }
   function totallyValue() {
-    const copy = sum;
-    let totallySum = 0;
+    const copy = sum
+    let totallySum = 0
     for (let i = 0; i < copy.length; i++) {
-      totallySum += Number(copy[i]);
+      totallySum += Number(copy[i])
     }
-    console.log(totallySum);
+    console.log(totallySum)
   }
   // useEffect(() => {
   // function fetchData() {
@@ -116,41 +116,48 @@ function Home() {
   // useEffect(fetchData, [])
   // fetchData()
   // }, [])
+  const onSubmit = (values) => {
+    console.log(values)
+  }
   return (
     <div className="Home">
       <Formik
-        initialValues={{ playerName: "" }}
+        initialValues={{ playerName: '' }}
         onSubmit={(values, { setSubmitting }) => {
           setTimeout(() => {
-            setSubmitting(false);
-          }, 1000);
+            setSubmitting(false)
+          }, 1000)
         }}
         validate={(values) => {
-          const errors = {};
+          const errors = {}
 
-          if (values.userName.trim() === "") {
-            errors.userName = "Player name cannot be empty";
+          if (values.userName.trim() === '') {
+            errors.userName = 'Player name cannot be empty'
           }
 
-          return errors;
+          return errors
         }}
       >
-        {({ handleChange, handleSubmit, isSubmitting, values }) => (
+        {({ errors, handleChange, handleSubmit, isSubmitting, values }) => (
           <form className="addPlayer" onSubmit={handleSubmit}>
-            <div className="addPlayer-container">
-              <input
-                className="addPlayer-container-btn"
-                disabled="isSubmitting"
-                type="submit"
-                value="Add"
-              />
+            {/* <div className="addPlayer-container"> */}
+            <input
+              className="addPlayer-container-btn"
+              disabled={isSubmitting}
+              type="submit"
+              value="Add"
+            />
+            <label>
               <input
                 className="addPlayer-container-input"
                 name="playerName"
-                placeholder="Player name"
                 onChange={handleChange}
+                placeholder="Player name"
+                value={values.playerName}
               />
-            </div>
+            </label>
+            {/* </div> */}
+            <span>{errors.userName}</span>
           </form>
         )}
       </Formik>
@@ -165,7 +172,69 @@ function Home() {
         <div className="Home-player-container"> {PlayerTables}</div>
       )}
     </div>
-  );
+
+    // <Formik
+    //   initialValues={{ password: '', userName: '' }}
+    //   onSubmit={(values, { setSubmitting }) => {
+    //     setTimeout(() => {
+    //       setSubmitting(false)
+    //     }, 1000)
+    //   }}
+    //   validate={(values) => {
+    //     const errors = {}
+
+    //     if (values.userName.trim() === '') {
+    //       errors.userName = 'User name cannot be empty'
+    //     }
+
+    //     if (values.password.trim() === '') {
+    //       errors.password = 'Password cannot be empty'
+    //     }
+
+    //     return errors
+    //   }}
+    // >
+    //   {({
+    //     errors,
+    //     handleBlur,
+    //     handleChange,
+    //     handleSubmit,
+    //     isSubmitting,
+    //     touched,
+    //     values
+    //   }) => (
+    //     <form onSubmit={handleSubmit}>
+    //       <label>
+    //         User name
+    //         <input
+    //           name="userName"
+    //           onBlur={handleBlur}
+    //           onChange={handleChange}
+    //           type="text"
+    //           value={values.userName}
+    //         />
+    //       </label>
+    //       {errors.userName && touched.userName && (
+    //         <span>{errors.userName}</span>
+    //       )}
+    //       <label>
+    //         Password
+    //         <input
+    //           name="password"
+    //           onBlur={handleBlur}
+    //           onChange={handleChange}
+    //           type="text"
+    //           value={values.password}
+    //         />
+    //       </label>
+    //       {errors.password && touched.password && (
+    //         <span>{errors.password}</span>
+    //       )}
+    //       <input disabled={isSubmitting} type="submit" />
+    //     </form>
+    //   )}
+    // </Formik>
+  )
 }
 
-export default Home;
+export default Home
