@@ -26,4 +26,6 @@ Lämna in koden som ett filarkiv (till exempel en Zip-fil) här på ITHS Distans
 
 
 Frågor:
+    - Key i console
+    - Fetch, om API:n slutade fungera
     - 

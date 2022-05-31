@@ -23,6 +23,7 @@
     color: #61dafb;
 }
 .Navbar-searchbar-container {
+    list-style: none;
     margin: auto;
 }
 .Navbar-searchbar {
@@ -39,9 +40,8 @@
     background-color: #373940;
 }
 
-li {
+.Navbar-container-item {
     list-style: none;
-
 }
 
 ul {

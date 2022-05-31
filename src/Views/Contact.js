@@ -1,38 +1,48 @@
-import './Contact.css'
-import axios from 'axios'
-import React, { useState, useEffect } from 'react'
-import styled from 'styled-components'
+import "./Contact.css";
+import axios from "axios";
+import React, { useState, useEffect } from "react";
+// import styled from "styled-components";
 
 function Contact() {
-  const [AddPlayer, setAddPlayer] = useState('')
-  const [PlayerName, setPlayerName] = useState('')
-  const [PlayerTables, setPlayerTables] = useState([])
-  const [value1, setValue1] = useState(0)
-  const [value2, setValue2] = useState(0)
-  const [value3, setValue3] = useState(0)
-  const [value4, setValue4] = useState(0)
-  const [value5, setValue5] = useState(0)
-  const [value6, setValue6] = useState(0)
-  const [value7, setValue7] = useState(0)
-  const [value8, setValue8] = useState(0)
-  const [value9, setValue9] = useState(0)
-  const [value10, setValue10] = useState(0)
-  const [total, setTotal] = useState(null)
-  const [char, setChar] = useState(null)
+  const [AddPlayer, setAddPlayer] = useState("");
+  const [PlayerName, setPlayerName] = useState("");
+  const [PlayerTables, setPlayerTables] = useState([]);
+  const [value1, setValue1] = useState(0);
+  const [value2, setValue2] = useState(0);
+  const [value3, setValue3] = useState(0);
+  const [value4, setValue4] = useState(0);
+  const [value5, setValue5] = useState(0);
+  const [value6, setValue6] = useState(0);
+  const [value7, setValue7] = useState(0);
+  const [value8, setValue8] = useState(0);
+  const [value9, setValue9] = useState(0);
+  const [value10, setValue10] = useState(0);
+  const [icon, setIcon] = useState(null);
+  let total =
+    Number(value1) +
+    Number(value2) +
+    Number(value3) +
+    Number(value4) +
+    Number(value5) +
+    Number(value6) +
+    Number(value7) +
+    Number(value8) +
+    Number(value9) +
+    Number(value10);
   // const H1 = styled.h1`
   //   text-align: center;
   // `
 
-  const TenRows = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  const TenRows = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   const PlayerTable = (
     <table>
       <thead>
         <tr>
           <th>
-            {char === null ? (
-              'Icon'
+            {icon === null ? (
+              "Icon"
             ) : (
-              <img className="table-icon" src={char.image} alt="Character" />
+              <img className="table-icon" src={icon.image} alt="Icon" />
             )}
           </th>
           <th>{PlayerName}</th>
@@ -63,32 +73,32 @@ function Contact() {
         </tr>
       </tfoot>
     </table>
-  )
+  );
   // let PlayerTables = [];
-  // PlayerTables.push(PlayerTable)
+  PlayerTables.push(PlayerTable);
   function handleChange(event) {
-    setAddPlayer(event.target.value)
+    setAddPlayer(event.target.value);
   }
   function handleSubmit(event) {
-    console.log(AddPlayer)
-    setPlayerName(AddPlayer)
-    PlayerTables.push(PlayerTable)
+    console.log(AddPlayer);
+    setPlayerName(AddPlayer);
+    PlayerTables.push(PlayerTable);
     // setPlayerTables(PlayerTable);
     // console.log(totallyValue);
     // setTotal(Number(totallyValue));
     // fetchData();
     // console.log(total);
-    event.preventDefault()
+    event.preventDefault();
   }
   function handleValue1(event) {
-    setValue1(event.target.value)
+    setValue1(event.target.value);
   }
   function handleValue2(event) {
-    setValue2(event.target.value)
+    setValue2(event.target.value);
   }
   // useEffect(() => {
   // function fetchData() {
-  //   axios.get("http://hp-api.herokuapp.com/api/characters").then((res) => {
+  //   axios.get("http://hp-api.herokuapp.com/api/iconacters").then((res) => {
   //     let result = res.data;
   //     // console.log(result)
   //     // console.log(result[0].image)
@@ -99,9 +109,9 @@ function Contact() {
   //     }
   //     let resultByImage = result.filter(filterByImage),
   //       rand = Math.floor(Math.random() * resultByImage.length),
-  //       randChar = resultByImage[rand];
-  //     console.log(randChar);
-  //     setChar(randChar);
+  //       randicon = resultByImage[rand];
+  //     console.log(randicon);
+  //     setIcon(randicon);
   //   });
   // }
 
@@ -109,8 +119,8 @@ function Contact() {
   // fetchData()
   // }, [])
   const onSubmit = (values) => {
-    console.log(values)
-  }
+    console.log(values);
+  };
   return (
     <div className="Contact">
       <form className="addPlayer" onSubmit={handleSubmit}>
@@ -129,14 +139,14 @@ function Contact() {
         <thead>
           <tr>
             <th>
-              {char === null ? (
-                'Icon'
+              {icon === null ? (
+                "Icon"
               ) : (
-                <img className="table-icon" src={char.image} alt="Character" />
+                <img className="table-icon" src={icon.image} alt="iconacter" />
               )}
             </th>
             <th>
-              {/* {char === null ? "Name" : char.name} */}
+              {/* {icon === null ? "Name" : icon.name} */}
               {PlayerName}
             </th>
           </tr>
@@ -246,23 +256,12 @@ function Contact() {
         <tfoot>
           <tr>
             <td>Sum</td>
-            <td>
-              {Number(value1) +
-                Number(value2) +
-                Number(value3) +
-                Number(value4) +
-                Number(value5) +
-                Number(value6) +
-                Number(value7) +
-                Number(value8) +
-                Number(value9) +
-                Number(value10)}
-            </td>
+            <td>{total}</td>
           </tr>
         </tfoot>
       </table>
     </div>
-  )
+  );
 }
 
-export default Contact
+export default Contact;
