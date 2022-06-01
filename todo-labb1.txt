@@ -7,7 +7,7 @@ Todo labb1:
 För G:
     ✓ Skapa en Single Page Application-webbapplikation, bestående av minst två webbsidor, med create-react-app/liknande och React Router/liknande
     ✓ Låt webbapplikationen kommunicera med minst en backend-tjänst med useEffect, samt fetch eller liknande (prova gärna att använda Axios istället för fetch)
-    - “Injicera”, och ta emot, minst en prop
+    ✓ “Injicera”, och ta emot, minst en prop
     ✓ Hantera minst ett event
     ✓ Använd useState minst en gång
     ✓ Använd && likt hur v-if skulle ha använts i Vue.js, minst en gång
@@ -26,6 +26,4 @@ Lämna in koden som ett filarkiv (till exempel en Zip-fil) här på ITHS Distans
 
 
 Frågor:
-    - Key i console
-    - Fetch, om API:n slutade fungera
-    - 
+    -

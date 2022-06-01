@@ -1,23 +1,23 @@
-import "./Contact.css";
-import axios from "axios";
-import React, { useState, useEffect } from "react";
+import './Contact.css'
+import axios from 'axios'
+import React, { useState, useEffect } from 'react'
 // import styled from "styled-components";
 
 function Contact() {
-  const [AddPlayer, setAddPlayer] = useState("");
-  const [PlayerName, setPlayerName] = useState("");
-  const [PlayerTables, setPlayerTables] = useState([]);
-  const [value1, setValue1] = useState(0);
-  const [value2, setValue2] = useState(0);
-  const [value3, setValue3] = useState(0);
-  const [value4, setValue4] = useState(0);
-  const [value5, setValue5] = useState(0);
-  const [value6, setValue6] = useState(0);
-  const [value7, setValue7] = useState(0);
-  const [value8, setValue8] = useState(0);
-  const [value9, setValue9] = useState(0);
-  const [value10, setValue10] = useState(0);
-  const [icon, setIcon] = useState(null);
+  const [AddPlayer, setAddPlayer] = useState('')
+  const [PlayerName, setPlayerName] = useState('')
+  const [PlayerTables, setPlayerTables] = useState([])
+  const [value1, setValue1] = useState(0)
+  const [value2, setValue2] = useState(0)
+  const [value3, setValue3] = useState(0)
+  const [value4, setValue4] = useState(0)
+  const [value5, setValue5] = useState(0)
+  const [value6, setValue6] = useState(0)
+  const [value7, setValue7] = useState(0)
+  const [value8, setValue8] = useState(0)
+  const [value9, setValue9] = useState(0)
+  const [value10, setValue10] = useState(0)
+  const [icon, setIcon] = useState(null)
   let total =
     Number(value1) +
     Number(value2) +
@@ -28,19 +28,19 @@ function Contact() {
     Number(value7) +
     Number(value8) +
     Number(value9) +
-    Number(value10);
+    Number(value10)
   // const H1 = styled.h1`
   //   text-align: center;
   // `
 
-  const TenRows = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  const TenRows = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
   const PlayerTable = (
     <table>
       <thead>
         <tr>
           <th>
             {icon === null ? (
-              "Icon"
+              'Icon'
             ) : (
               <img className="table-icon" src={icon.image} alt="Icon" />
             )}
@@ -73,28 +73,28 @@ function Contact() {
         </tr>
       </tfoot>
     </table>
-  );
+  )
   // let PlayerTables = [];
-  PlayerTables.push(PlayerTable);
+  PlayerTables.push(PlayerTable)
   function handleChange(event) {
-    setAddPlayer(event.target.value);
+    setAddPlayer(event.target.value)
   }
   function handleSubmit(event) {
-    console.log(AddPlayer);
-    setPlayerName(AddPlayer);
-    PlayerTables.push(PlayerTable);
+    console.log(AddPlayer)
+    setPlayerName(AddPlayer)
+    PlayerTables.push(PlayerTable)
     // setPlayerTables(PlayerTable);
     // console.log(totallyValue);
     // setTotal(Number(totallyValue));
     // fetchData();
     // console.log(total);
-    event.preventDefault();
+    event.preventDefault()
   }
   function handleValue1(event) {
-    setValue1(event.target.value);
+    setValue1(event.target.value)
   }
   function handleValue2(event) {
-    setValue2(event.target.value);
+    setValue2(event.target.value)
   }
   // useEffect(() => {
   // function fetchData() {
@@ -119,8 +119,8 @@ function Contact() {
   // fetchData()
   // }, [])
   const onSubmit = (values) => {
-    console.log(values);
-  };
+    console.log(values)
+  }
   return (
     <div className="Contact">
       <form className="addPlayer" onSubmit={handleSubmit}>
@@ -140,7 +140,7 @@ function Contact() {
           <tr>
             <th>
               {icon === null ? (
-                "Icon"
+                'Icon'
               ) : (
                 <img className="table-icon" src={icon.image} alt="iconacter" />
               )}
@@ -261,7 +261,7 @@ function Contact() {
         </tfoot>
       </table>
     </div>
-  );
+  )
 }
 
-export default Contact;
+export default Contact

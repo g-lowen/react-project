@@ -1,7 +1,7 @@
-import "./Footer.css";
+import './Footer.css'
 
-function Footer() {
-  return <div className="Footer">FOOTER</div>;
+function Footer(props) {
+  return <div className="Footer">{props.value}</div>
 }
 
-export default Footer;
+export default Footer
