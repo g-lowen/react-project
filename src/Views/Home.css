@@ -43,7 +43,7 @@ tbody {
   background-color: rgb(202, 220, 226);
 }
 .addPlayer-container-btn:active {
-  background-color: #fff;
+  background-color: rgb(202, 220, 226);
   transform: translateY(1px);
 }
 .addPlayer-container-input {
@@ -93,8 +93,9 @@ tbody {
 }
 .table-icon {
   border-radius: 50%;
-  height: 100px;
-  width: 100px;
+  height: 40px;
+  margin: 10px 5px 0px 10px;
+  width: 40px;
 }
 .welcome-heading {
   text-align: center;

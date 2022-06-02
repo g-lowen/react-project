@@ -1,9 +1,9 @@
-import './Rules.css'
+import "./Rules.css";
 
 function Rules() {
   return (
     <div className="Rules">
-      <h1>Rules</h1>
+      <h1>How to play 10 000</h1>
       <h2>Scoring</h2>
       <div>These are the base methods of scoring:</div>
       <ul>
@@ -48,7 +48,7 @@ function Rules() {
         score'.
       </p>
     </div>
-  )
+  );
 }
 
-export default Rules
+export default Rules;

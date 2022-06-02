@@ -13,13 +13,13 @@ För G:
     ✓ Använd && likt hur v-if skulle ha använts i Vue.js, minst en gång
     ✓ Använd conditional-operatorn likt hur v-if och v-else skulle ha använts i Vue.js, minst en gång
     ✓ Använd map likt hur v-for skulle ha använts i Vue.js, minst en gång
-    - Presentera webbapplikationen och dess kod under 5-15 minuter (exklusive frågor) på plats och på svenska den 2/6 (Presentationen behöver inte innehålla slides)
+    ✓ Presentera webbapplikationen och dess kod under 5-15 minuter (exklusive frågor) på plats och på svenska den 2/6 (Presentationen behöver inte innehålla slides)
 
 För VG så ska, utöver att kraven för G är uppfyllda, följande vara uppfyllt:
     - Använd useContext eller liknande för tillståndshantering (Minst ett värde)
     - Använd Formik eller liknande för formulärhantering, inklusive validering (Formuläret kan vara simpelt, och kan till exempel innehålla endast ett textfält och en submit-knapp)
     ✓ Använd styled-components eller liknande (en CSS-in-JS-lösning) för stilsättning (Det räcker att stilsätta ett element)
-    - Lämna in helt konsistent formaterad kod (Förslagsvis kod formaterad automatiskt via Format On Save och Prettier)
+    ✓ Lämna in helt konsistent formaterad kod (Förslagsvis kod formaterad automatiskt via Format On Save och Prettier)
 
 Uppgiften ska göras individuellt.
 Lämna in koden som ett filarkiv (till exempel en Zip-fil) här på ITHS Distans. node_modules-mappen ska inte ingå i filarkivet som lämnas in.
