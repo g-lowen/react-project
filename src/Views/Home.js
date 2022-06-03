@@ -12,6 +12,7 @@ function Home() {
 
   useEffect(() => {
     // console.log("useEffect körs!");
+    players.forEach((player) => console.log(player.sum));
     // forEach på players med en inre sum
     // ^ loopa igenom players och gör en funktion som summerar
   }, [players]);
