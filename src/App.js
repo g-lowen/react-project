@@ -1,10 +1,10 @@
-import "./App.css";
-import Navbar from "./UI/Navbar";
-import Footer from "./UI/Footer";
-import { Routes, Route } from "react-router-dom";
-import Contact from "../src/Views/Contact";
-import Home from "../src/Views/Home";
-import Rules from "../src/Views/Rules";
+import "./App.css"
+import Navbar from "./UI/Navbar"
+import Footer from "./UI/Footer"
+import { Routes, Route } from "react-router-dom"
+import Contact from "../src/Views/Contact"
+import Home from "../src/Views/Home"
+import Rules from "../src/Views/Rules"
 
 function App() {
   return (
@@ -17,9 +17,9 @@ function App() {
           <Route element={<Rules />} path="/rules" />
         </Routes>
       </main>
-      <Footer value={"Footer (actually a prop)"} />
+      <Footer value={"Copyright 2022 by Gustav :)"} />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

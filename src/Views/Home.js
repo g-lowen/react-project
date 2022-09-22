@@ -1,21 +1,23 @@
-import "./Home.css";
-import axios from "axios";
-import { Field, ErrorMessage, Form, Formik } from "formik";
-import React, { useState, useEffect } from "react";
-import styled from "styled-components";
+import "./Home.css"
+import axios from "axios"
+import { Field, ErrorMessage, Form, Formik } from "formik"
+import React, { useState, useEffect } from "react"
+import styled from "styled-components"
 
 function Home() {
   const [addPlayer, setAddPlayer] = useState(""),
     [playerName, setPlayerName] = useState(""),
     [icon, setIcon] = useState(null),
-    [players, setPlayers] = useState([]);
+    [players, setPlayers] = useState([])
 
   useEffect(() => {
     // console.log("useEffect körs!");
-    players.forEach((player) => console.log(player.sum));
+    // players.forEach((player) => {
+    //   console.log(player.sum)
+    // })
     // forEach på players med en inre sum
     // ^ loopa igenom players och gör en funktion som summerar
-  }, [players]);
+  }, [players])
   const playerTable = (
     <div className="Home-player-container">
       {players.map((player, index) => (
@@ -32,13 +34,13 @@ function Home() {
                     alt="iconacter"
                   />
                 )} */}
-                {icon && (
+                {/* {icon && (
                   <img
                     className="table-icon"
                     src={player.icon.image}
                     alt="iconacter"
                   />
-                )}
+                )} */}
               </th>
               <th>{player.name}</th>
             </tr>
@@ -46,15 +48,15 @@ function Home() {
           <tbody>
             {player.numbers.map((value, index) => (
               <tr key={index}>
-                <td>{index + 1}</td>
-                <td className="row-container">
+                <td className="row-container-left">{index + 1}</td>
+                <td className="row-container-right">
                   <input
                     className="row"
                     type="number"
                     onBlur={(event) => {
-                      player.numbers[index] = event.target.value;
-                      setPlayers(players);
-                      total(player);
+                      player.numbers[index] = event.target.value
+                      setPlayers(players)
+                      total(player)
                     }}
                   ></input>
                 </td>
@@ -63,27 +65,29 @@ function Home() {
           </tbody>
           <tfoot>
             <tr>
-              <td>Sum</td>
-              <td>{player.sum}</td>
+              <td className="row-container-left">Sum</td>
+              <td className="row-container-right row-container-bottom">
+                {player.sum}
+              </td>
             </tr>
           </tfoot>
         </table>
       ))}
     </div>
-  );
+  )
   function handleChange(event) {
-    setAddPlayer(event.target.value);
+    setAddPlayer(event.target.value)
   }
   function total(player) {
-    const strToNum = player.numbers.map((str) => Number(str));
-    const initialValue = 0;
+    const strToNum = player.numbers.map((str) => Number(str))
+    const initialValue = 0
     const sum = strToNum.reduce(
       (previousValue, currentValue) => previousValue + currentValue,
       initialValue
-    );
-    player.sum = sum;
-    setPlayers(JSON.parse(JSON.stringify(players)));
-    console.log(players);
+    )
+    player.sum = sum
+    setPlayers(JSON.parse(JSON.stringify(players)))
+    // console.log(players)
   }
 
   function handleSubmit(event) {
@@ -91,28 +95,28 @@ function Home() {
       name: addPlayer,
       numbers: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
       sum: 0,
-      icon,
-    };
-    setPlayers([...players, player]);
-    console.log(players);
-    fetchData();
-    event.preventDefault();
+      icon
+    }
+    setPlayers([...players, player])
+    console.log(players)
+    fetchData()
+    event.preventDefault()
   }
   function fetchData() {
     axios.get("http://hp-api.herokuapp.com/api/characters").then((res) => {
-      let result = res.data;
+      let result = res.data
       function filterByImage(result) {
         if (result.image !== "") {
-          return true;
+          return true
         }
       }
       let resultByImage = result.filter(filterByImage),
         rand = Math.floor(Math.random() * resultByImage.length),
-        randIcon = resultByImage[rand];
-      setIcon(randIcon);
-    });
+        randIcon = resultByImage[rand]
+      setIcon(randIcon)
+    })
   }
-  useEffect(fetchData, []);
+  useEffect(fetchData, [])
   return (
     <div className="Home">
       <form className="addPlayer" onSubmit={handleSubmit}>
@@ -122,7 +126,7 @@ function Home() {
             className="addPlayer-container-input"
             name="name"
             onChange={handleChange}
-            placeholder="Player name"
+            placeholder="Write player name here"
           />
         </label>
       </form>
@@ -132,7 +136,7 @@ function Home() {
         playerTable
       )}
     </div>
-  );
+  )
 }
 
-export default Home;
+export default Home

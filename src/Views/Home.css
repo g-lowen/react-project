@@ -1,27 +1,27 @@
-table{
+table {
   /* border: 5px solid green; */
   max-width: 50%;
-  margin:  50px auto 10px auto;
-  background-color: rgba(0,0,0,0.1);
-  border-radius: 10px;
+  margin: 50px auto 10px auto;
+  padding: 20px;
+  /* background-color: rgba(0,0,0,0.1); */
+  /* background-color: rgba(255, 255, 255, 0.1); */
+  border-radius: 5px;
+  -webkit-box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
 }
 th {
-  /* border: 5px solid red; */
-  /* max-width: 50%; */
 }
 td {
-  /* border: 5px solid blue;
-  max-width: 50%; */
 }
 thead {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 tbody {
   margin-right: 10px;
 }
 .addPlayer {
   background-color: #282c34;
-  color: #FFF;
+  color: #fff;
   margin-left: auto;
   margin-right: auto;
   padding: 10px;
@@ -74,23 +74,38 @@ tbody {
 .Home-player-container {
   /* align-items: center; */
   display: grid;
-  justify-content: center;
   grid-template-columns: 1fr;
+  justify-content: center;
+  padding-bottom: 50px;
 }
 .Home-h1 {
   text-align: center;
 }
+
+.test {
+  margin: 15px;
+}
 .row {
   padding: 10px 10px 10px 10px;
-  margin-right: 20px;
+  /* margin: 20px; */
 }
-.row-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  max-width: 50%;
+
+.row-container-left {
+  /* padding-left: 25px; */
+  /* text-align: end; */
 }
+.row-container-right {
+  /* align-items: center; */
+  /* display: flex; */
+  /* justify-content: center; */
+  /* margin: auto; */
+  /* max-width: 50%; */
+  /* padding-right: 25px; */
+}
+.row-container-bottom {
+  /* padding-bottom: 20px; */
+}
+
 .table-icon {
   border-radius: 50%;
   height: 40px;

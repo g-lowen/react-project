@@ -1,5 +1,5 @@
-import './Navbar.css'
-import { Link } from 'react-router-dom'
+import "./Navbar.css"
+import { Link } from "react-router-dom"
 
 function Navbar() {
   return (
@@ -7,17 +7,17 @@ function Navbar() {
       <nav className="Navbar">
         <ul className="Navbar-container">
           <li className="Navbar-container-item">
-            <Link className="Test" to="/">
+            <Link className="nav-item" to="/">
               Home
             </Link>
           </li>
           <li className="Navbar-container-item">
-            <Link className="Test" to="/rules">
+            <Link className="nav-item" to="/rules">
               Rules
             </Link>
           </li>
           <li className="Navbar-container-item">
-            <Link className="Test" to="/contact">
+            <Link className="nav-item" to="/contact">
               Contact
             </Link>
           </li>
