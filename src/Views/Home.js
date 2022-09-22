@@ -1,12 +1,12 @@
 import "./Home.css"
 import axios from "axios"
-import { Field, ErrorMessage, Form, Formik } from "formik"
+// import { Field, ErrorMessage, Form, Formik } from "formik"
 import React, { useState, useEffect } from "react"
-import styled from "styled-components"
+// import styled from "styled-components"
 
 function Home() {
   const [addPlayer, setAddPlayer] = useState(""),
-    [playerName, setPlayerName] = useState(""),
+    // [playerName, setPlayerName] = useState(""),
     [icon, setIcon] = useState(null),
     [players, setPlayers] = useState([])
 
